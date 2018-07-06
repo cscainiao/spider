@@ -1,0 +1,7 @@
+
+
+
+
+biquge_redis_master.py负责将url存入redis, 供biquge.py读取redis里面的url并爬取, 可以开多个biquge.py 进行爬取
+本来应该单独开启一个项目负责爬取url存入redis, 此处直接先运行biquge_redis_master.py, 将url先存入redis, 再启动
+biquge.py爬取
