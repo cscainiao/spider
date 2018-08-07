@@ -48,9 +48,9 @@ def write_mongodb(page_source):
 
 
 def main():
-    option = webdriver.ChromeOptions()  # 设置浏览器不开启运行
-    option.add_argument("headless")
-    browser = webdriver.Chrome(chrome_options=option)
+    chrome_options = webdriver.ChromeOptions()  # 设置浏览器不开启运行
+    chrome_options.add_argument("headless")
+    browser = webdriver.Chrome(chrome_options=chrome_options)
     browser.get('https://s.taobao.com/search?')
     search_input = browser.find_element_by_id('q')  # 获取输入框
     for keyword in ['空调', '洗衣机', '电脑', '情趣品']:
