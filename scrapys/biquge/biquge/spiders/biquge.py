@@ -22,7 +22,7 @@ class biquge_spider(RedisSpider):
     def parse(self, response):
 
         zhangjie_url = response.url
-        xiaoshuoming = response.xpath('//*[@id="info"]/h1/text()').extract()[0]
+        xiaoshuoming = response.xpath('//*[@id="info"]/h1/text()').extract()[0]  # ectract_first(）里面可以传入取不到值时，默认的数据
         # print(xiaoshuoming)
         zhangjielianjie = response.xpath('//*[@id="list"]/dl/dd/a/@href').extract()
 

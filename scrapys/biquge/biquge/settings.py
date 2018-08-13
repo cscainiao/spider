@@ -65,7 +65,7 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'biquge.pipelines.BiqugePipeline': 300,
+   'biquge.pipelines.BiqugePipeline': 300,  # 优先层级， 先实现前面的pipline 如果有几个层级，前面的pipline必须返回item，否则后面的pipline获取不到item
    'biquge.pipelines.biquge_urlPipeline': 301,
 }
 
